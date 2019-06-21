@@ -33,10 +33,10 @@ const Resource = (props) => {
             <CardTitle className="">
                 <h2 className="cardTitle">Symptoms of diabetes</h2>
             </CardTitle>
-            <ul className="list p-0 Types">
+            <ul className="list  Types">
                 {Symptoms.map((sym) => {
                     return (
-                        <li className="list-item d-inline-flex col-lg-4 col-md-12 mb-4" key={sym.symptom}>
+                        <li className="list-item justify-content-center d-inline-flex col-lg-4 col-md-12 mb-4" key={sym.symptom}>
                             <div className="list-content">
                                 <img className="rounded-circle"
                                     src={sym.img}
