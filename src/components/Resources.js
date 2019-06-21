@@ -15,7 +15,8 @@ const Resource = (props) => {
             <Card>
                 <CardBody>
                     <CardTitle className='cardTitle'>
-                        <h2>What is diabetes?</h2></CardTitle>
+                        <h2>What is diabetes?</h2>
+                    </CardTitle>
                     <CardImg top width="100%" src={'../images/dia-image1.jpg'} style={{ height: 400 }} alt="Card image cap" />
                     <CardText>Diabetes is the condition in which the body does not properly process food for use as energy.
                     Most of the food we eat is turned into glucose, or sugar, for our bodies to use for energy. The
@@ -31,17 +32,20 @@ const Resource = (props) => {
             </Card>
             {/* some pictures in carousel */}
             <hr />
-            <ImgCarousel />
+            <ImgCarousel/>
             <hr />
             <CardTitle className="">
                 <h2 className="cardTitle">Symptoms of diabetes</h2>
             </CardTitle>
-            <ul className="list p-0">
+            <ul className="list p-0 Types">
                 {Symptoms.map((sym) => {
                     return (
-                        <li className="list-item d-inline-flex col-lg-4 col-md-12  " key={sym.symptom}>
+                        <li className="list-item d-inline-flex col-lg-4 col-md-12 mb-4" key={sym.symptom}>
                             <div className="list-content">
-                                <img className="rounded-circle" src={sym.img} style={{ width: "60%" }} alt={sym.symptom} />
+                                <img className="rounded-circle" 
+                                src={sym.img} 
+                                style={{ width: "60%", }} 
+                                alt={sym.symptom} />
                                 <h5>{sym.symptom}</h5>
                             </div>
                         </li>
@@ -53,18 +57,18 @@ const Resource = (props) => {
             {/* types of diabities */}
             {diaTypes.map((dataType) => {
                 return (
-                    <Card className="mt-4" key={dataType.header}>
+                    <Card className="mt-5 Types" key={dataType.header}>
                         <CardTitle className="cardTitle">
                             <h2>{dataType.header}</h2>
                         </CardTitle>
-                        <CardText>
+                        <CardText className="text-left p-4">
                             {dataType.discription}
                         </CardText>
                     </Card>
                 )
             })}
-            <Card className="mt-4">
-                <CardTitle className="">
+            <div className="mt-5">
+                <CardTitle className="mb-5">
                     <h2 className="cardTitle">Taking Care of Your Diabetes </h2>
                 </CardTitle>
                 <ul className="list p-0">
@@ -75,14 +79,14 @@ const Resource = (props) => {
                                 <div className="list-content">
                                     <h4>{prevention.title}</h4>
                                     <img src={image} style={{ width: "100%" }} alt={prevention.title} />
-                                    <p>{prevention.discription}</p>
+                                    <p className='text-left'>{prevention.discription}</p>
                                 </div>
                             </li>
                         )
                     })
                     }
                 </ul>
-            </Card>
+            </div>
         </Container>
     );
 };

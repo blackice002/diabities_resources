@@ -24,14 +24,10 @@ export const preWay =[
     },
     {
         "title":"Drink Water as Your Primary Beverage",
-        "discription":"Drinking water instead of other beverages may help control blood sugar and insulin levels, thereby reducing the risk of diabetes.",
+        "discription":" Drinking water instead of other beverages may help control blood sugar and insulin levels,thereby reducing the risk of diabetes.",
         "img":"../images/preIMg3.jpg"
     },
-    {
-        "title":"Lose Weight If You're Overweight or Obese",
-        "discription":"Carrying excess weight, particularly in the abdominal area, increases the likelihood of developing diabetes. Losing weight may significantly reduce the risk of diabetes.",
-        "img":"../images/preIMg4.jpg"
-    },
+
     {
         "title":"Quit Smoking",
         "discription":"Smoking is strongly linked to the risk of diabetes, especially in heavy smokers. Quitting has been shown to reduce this risk over time.",
@@ -52,6 +48,11 @@ export const preWay =[
         "discription":"Avoiding sedentary behaviors like excessive sitting has been shown to reduce your risk of getting diabetes.",
         "img":"../images/preIMg8.jpg"
     },
+    {
+        "title":"Optimize Vitamin D Levels",
+        "discription":"Consuming foods high in vitamin D or taking supplements can help optimize vitamin D blood levels, which can reduce your risk of diabetes.",
+        "img":"../images/preIMg10.jpg"
+    },
 
     {
         "title":"Eat a High-Fiber Diet",
@@ -59,10 +60,11 @@ export const preWay =[
         "img":"../images/preIMg9.jpg"
     },
     {
-        "title":"Optimize Vitamin D Levels",
-        "discription":"Consuming foods high in vitamin D or taking supplements can help optimize vitamin D blood levels, which can reduce your risk of diabetes.",
-        "img":"../images/preIMg10.jpg"
+        "title":"Lose Weight If You're Overweight or Obese",
+        "discription":"Carrying excess weight, particularly in the abdominal area, increases the likelihood of developing diabetes. Losing weight may significantly reduce the risk of diabetes.",
+        "img":"../images/preIMg4.jpg"
     },
+
 
 ]
 

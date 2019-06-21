@@ -32,9 +32,10 @@
   }
 }
 .cardTitle{
-  background-color: blue;
+  background-color: #4569FF;
   border-radius: 0 0 50px 50px;
   color:white;
+  box-shadow: 0 5px 2px rgb(166, 203, 216)
 }
 .cardTitle1{
   background-color: rgb(250, 150, 0);
@@ -43,10 +44,24 @@
   
 }
 .cardTitle2{
-  border-bottom: 5px solid blue;
+  /* border-bottom: 5px solid #4569FF; */
   border-radius: 0 0 10px 10px;
+  margin-bottom: 5vh;
+  border: 2px solid rgba(166, 203, 216, .5);
+  padding:5px 10px 5px 10px;
+  /* border-radius: 15px; */
+  box-shadow: 0 5px 2px rgb(166, 203, 216)
 }
 .arrowColor{
-  background-color:blue;
-  opacity: 1;
+  background-color:#4569FF;
+}
+.Types{
+  box-shadow: 0 5px 2px rgb(166, 203, 216);
+  border-radius: 15px;
+  margin-bottom: 5vh;
+}
+
+.rounded-circle{
+  box-shadow: 0 10px 2px rgb(166, 203, 216);
+  margin-bottom:2vh;
 }
