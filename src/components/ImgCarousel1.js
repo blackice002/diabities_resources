@@ -4,29 +4,37 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
+  CarouselCaption
 } from 'reactstrap';
 
 const items = [
   {
-    src: "../images/preIMg6.jpg",
+    src:"../images/dia-image1.jpg" ,
+    altText: 'Slide 6',
+  },
+  {
+    src: "../images/dia1.jpg",
     altText: 'Slide 1',
   },
   {
-    src: "../images/preIMg5.jpg",
+    src: "../images/dia2.jpg",
     altText: 'Slide 2',
   },
   {
-    src:"../images/preIMg2.png" ,
+    src:"../images/dia3.jpg" ,
     altText: 'Slide 3',
   },
   {
-    src:"../images/preIMg9.jpg" ,
+    src:"../images/dia4.jpg" ,
     altText: 'Slide 4',
-  
+  },
+  {
+    src:"../images/dia5.jpg" ,
+    altText: 'Slide 5',
   }
 ];
 
-class ImgCarousel extends Component {
+class ImgCarousel1 extends Component {
   constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };
@@ -72,7 +80,8 @@ class ImgCarousel extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src}  alt={item.altText} className="carouselImg" />
+          <img src={item.src} alt={item.altText} className="carouselImg" />
+          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
         </CarouselItem>
       );
     });
@@ -85,12 +94,12 @@ class ImgCarousel extends Component {
       >
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
         {slides}
-        <CarouselControl className="arrowColor" direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl className="arrowColor" direction="next" directionText="Next" onClickHandler={this.next} />
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
       </Carousel>
     );
   }
 }
 
 
-export default ImgCarousel;
+export default ImgCarousel1;

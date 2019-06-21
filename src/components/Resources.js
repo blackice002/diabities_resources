@@ -1,24 +1,23 @@
 import React from 'react'
 import {
-    Card, CardImg, CardText, CardBody, Container,
-    CardTitle,
+    Card, CardText, CardBody, Container, CardTitle,
 } from 'reactstrap';
 import ImgCarousel from './ImgCarousel';
+import ImgCarousel1 from './ImgCarousel1';
 import { diaTypes, preWay, Symptoms } from '../diabitiesData';
 // import { types } from '@babel/core';
 
 const Resource = (props) => {
-
-
     return (
         <Container>
-            <Card>
+            {/* introduction card */}
+            <Card className="firstCard mb-5">
                 <CardBody>
-                    <CardTitle className='cardTitle'>
+                    <CardTitle className='cardTitle mb-4'>
                         <h2>What is diabetes?</h2>
                     </CardTitle>
-                    <CardImg top width="100%" src={'../images/dia-image1.jpg'} style={{ height: 400 }} alt="Card image cap" />
-                    <CardText>Diabetes is the condition in which the body does not properly process food for use as energy.
+                    <ImgCarousel1 />
+                    <CardText className="text-left mt-4">Diabetes is the condition in which the body does not properly process food for use as energy.
                     Most of the food we eat is turned into glucose, or sugar, for our bodies to use for energy. The
                     pancreas, an organ that lies near the stomach, makes a hormone called insulin to help
                     glucose get into the cells of our bodies. When you have diabetes, your body either doesn't
@@ -30,10 +29,7 @@ const Resource = (props) => {
                     </CardText>
                 </CardBody>
             </Card>
-            {/* some pictures in carousel */}
-            <hr />
-            <ImgCarousel/>
-            <hr />
+            {/* symptoms of diabites */}
             <CardTitle className="">
                 <h2 className="cardTitle">Symptoms of diabetes</h2>
             </CardTitle>
@@ -42,10 +38,10 @@ const Resource = (props) => {
                     return (
                         <li className="list-item d-inline-flex col-lg-4 col-md-12 mb-4" key={sym.symptom}>
                             <div className="list-content">
-                                <img className="rounded-circle" 
-                                src={sym.img} 
-                                style={{ width: "60%", }} 
-                                alt={sym.symptom} />
+                                <img className="rounded-circle"
+                                    src={sym.img}
+                                    style={{ width: "60%", }}
+                                    alt={sym.symptom} />
                                 <h5>{sym.symptom}</h5>
                             </div>
                         </li>
@@ -67,6 +63,9 @@ const Resource = (props) => {
                     </Card>
                 )
             })}
+            {/* care image carousel */}
+            <ImgCarousel />
+            {/* self caring with picture */}
             <div className="mt-5">
                 <CardTitle className="mb-5">
                     <h2 className="cardTitle">Taking Care of Your Diabetes </h2>
@@ -87,6 +86,8 @@ const Resource = (props) => {
                     }
                 </ul>
             </div>
+            {/* medication */}
+
         </Container>
     );
 };
